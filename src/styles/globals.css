@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-easystrat-ivory text-easystrat-midnight;
+  }
+}
+
+@layer components {
+  /* Effet "éclairage d'écran" pour le hero */
+  .screen-glow {
+    background: radial-gradient(
+      circle at center,
+      rgba(27, 208, 242, 0.1) 0%,
+      rgba(11, 30, 58, 0.05) 50%,
+      transparent 100%
+    );
+  }
+  
+  /* Animation de connexion de points */
+  .connection-line {
+    background: linear-gradient(90deg, transparent, #1BD0F2, transparent);
+    height: 2px;
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+  }
+  
+  /* Boutons EasyStrat */
+  .btn-primary {
+    @apply bg-easystrat-coral text-white px-6 py-3 rounded-lg font-semibold 
+           hover:scale-105 transition-all duration-200 
+           focus:ring-2 focus:ring-easystrat-coral focus:outline-none;
+  }
+  
+  .btn-secondary {
+    @apply bg-easystrat-cyan text-white px-6 py-3 rounded-lg font-semibold 
+           hover:scale-105 transition-all duration-200 
+           focus:ring-2 focus:ring-easystrat-cyan focus:outline-none;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-easystrat-cyan text-easystrat-cyan px-6 py-3 rounded-lg font-semibold 
+           hover:bg-easystrat-cyan hover:text-white transition-all duration-200 
+           focus:ring-2 focus:ring-easystrat-cyan focus:outline-none;
+  }
+  
+  /* Container responsive */
+  .container-easystrat {
+    @apply max-w-7xl mx-auto px-4 md:px-6 lg:px-8;
+  }
+  
+  /* Section spacing */
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+}
+
+@layer utilities {
+  /* Text gradients */
+  .text-gradient {
+    @apply bg-gradient-to-r from-easystrat-cyan to-easystrat-coral bg-clip-text text-transparent;
+  }
+  
+  /* Smooth scrolling */
+  .smooth-scroll {
+    scroll-behavior: smooth;
+  }
+  
+  /* Animation delays */
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
+  .animation-delay-600 { animation-delay: 600ms; }
+  .animation-delay-700 { animation-delay: 700ms; }
+  .animation-delay-800 { animation-delay: 800ms; }
+  .animation-delay-900 { animation-delay: 900ms; }
+  .animation-delay-1000 { animation-delay: 1000ms; }
+} 

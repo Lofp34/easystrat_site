@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://easystrat.com/sitemap.xml
+
+# Disallow admin areas (when they exist)
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+
+# Allow important pages
+Allow: /solution
+Allow: /fonctionnalites
+Allow: /secteurs
+Allow: /tarifs
+Allow: /blog
+Allow: /contact
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

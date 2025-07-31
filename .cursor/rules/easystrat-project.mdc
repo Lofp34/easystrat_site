@@ -1,0 +1,171 @@
+# EasyStrat - Règles de développement
+
+## Architecture technique recommandée
+
+### Stack technologique
+- **Frontend** : Next.js 14+ avec React 18+ (App Router)
+- **Styling** : Tailwind CSS + Framer Motion pour les animations
+- **Backend** : Supabase (PostgreSQL + Auth + Real-time)
+- **Déploiement** : Vercel
+- **Hébergement** : GitHub
+
+### Structure du projet
+```
+easystrat_site/
+├── src/
+│   ├── app/                    # Pages Next.js (App Router)
+│   ├── components/             # Composants React réutilisables
+│   ├── lib/                    # Utilitaires et configurations
+│   ├── styles/                 # Styles globaux
+│   └── types/                  # Types TypeScript
+├── public/                     # Assets statiques
+├── supabase/                   # Migrations et configurations Supabase
+└── docs/                       # Documentation
+```
+
+## Identité visuelle EasyStrat
+
+### Palette de couleurs
+- **Bleu Minuit** : `#0B1E3A` (confiance, fond principal)
+- **Cyan Électrique** : `#1BD0F2` (innovation, accents)
+- **Corail Action** : `#FF6A5A` (CTA, actions)
+- **Ivoire UI** : `#F8F7F4` (fond chaud, contenu)
+- **Gris Pierre** : `#A9B0B8` (texte secondaire)
+
+### Typographies
+- **Titres** : Sans-serif humaniste (Inter ou Poppins)
+- **Texte/UI** : Grotesque fonctionnelle (Inter)
+
+### Motifs visuels
+- Motif "points connectés" (données reliées)
+- Effet "éclairage d'écran" en hero
+- Pictos linéaires minimalistes
+
+## Architecture des pages
+
+### Structure multi-page (SEO-friendly)
+1. **Accueil** (`/`) - Hero, social proof, briques clés, secteurs
+2. **Solution** (`/solution`) - Concept "noyau + strats"
+3. **Fonctionnalités** (`/fonctionnalites/*`) - Pages dédiées par fonction
+4. **Secteurs** (`/secteurs/*`) - Auto, Immobilier, etc.
+5. **Tarifs** (`/tarifs`) - Plans et abonnement
+6. **Ressources** (`/ressources`) - Guides et études
+7. **À propos** (`/a-propos`) - Mission et équipe
+8. **Contact** (`/contact`) - Formulaire et démo
+9. **Auth** (`/connexion`, `/inscription`) - Login/Signup
+
+### Navigation
+- Header avec accès rapide Connexion/Inscription
+- Menu principal : Solution, Fonctionnalités, Secteurs, Tarifs
+- Footer avec liens utiles
+
+## Règles de développement
+
+### Code et conventions
+- **TypeScript** obligatoire pour tous les fichiers
+- **ESLint + Prettier** pour la qualité du code
+- **Composants fonctionnels** avec hooks React
+- **Responsive design** mobile-first
+- **Accessibilité** (WCAG 2.1 AA minimum)
+
+### Composants
+- Créer des composants réutilisables dans `/components`
+- Utiliser des props TypeScript typées
+- Implémenter des variants avec `cva` ou `clsx`
+- Tests unitaires pour les composants critiques
+
+### Animations
+- **Framer Motion** pour les transitions
+- Animations sobres et signifiantes
+- Effet "connexion de points" pour illustrer les liens
+- Scroll-triggered animations
+
+### Performance
+- **Next.js Image** pour l'optimisation des images
+- **Lazy loading** pour les composants non critiques
+- **Code splitting** automatique avec Next.js
+- **Core Web Vitals** optimisés
+
+## Contenu et copywriting
+
+### Ton éditorial
+- Précis, orienté résultat
+- Zéro jargon inutile
+- Business pragmatique avec légère ironie
+- Bénéfices d'abord, détails techniques au second niveau
+
+### Messages clés
+- "La stratégie n'attend pas : planifiez, reliez, exécutez"
+- "Un agenda qui connaît vos données. Pas l'inverse."
+- "Des briques communes, des strats métier : votre outil s'adapte à vous"
+
+### Personas cibles
+- CEO/Dirigeant·e de PME/ETI
+- COO/Directeur·trice des Opérations
+- Directeur·trice Commerciale
+- Responsable Service/Planning
+- DSI/Responsable IT
+
+## Intégration Supabase
+
+### Configuration
+- Authentification avec Supabase Auth
+- Base de données PostgreSQL pour les données utilisateur
+- Real-time pour les notifications
+- Storage pour les assets
+
+### Modèles de données
+- Utilisateurs (pro/perso)
+- Organisations
+- Projets et tâches
+- Contacts et CRM
+- Facturation et paiements
+
+## Déploiement et CI/CD
+
+### GitHub
+- Branches : `main`, `develop`, `feature/*`
+- Pull requests obligatoires
+- Code review avant merge
+
+### Vercel
+- Déploiement automatique depuis `main`
+- Preview deployments pour les PR
+- Variables d'environnement sécurisées
+
+## Priorités de développement
+
+### Phase 1 : Fondations
+1. Setup Next.js + Tailwind + Supabase
+2. Page d'accueil avec hero et navigation
+3. Système d'authentification
+4. Design system de base
+
+### Phase 2 : Pages principales
+1. Solution (concept noyau + strats)
+2. Fonctionnalités (Agenda, CRM, Projets)
+3. Secteurs (Auto, Immobilier)
+4. Tarifs et inscription
+
+### Phase 3 : Fonctionnalités avancées
+1. Intégration complète Supabase
+2. Système de notifications
+3. Dashboard utilisateur
+4. Paiements en ligne
+
+## Ressources et références
+
+### Documentation
+- [Description.txt](mdc:Description.txt) - Spécifications complètes du projet
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Supabase Documentation](https://supabase.com/docs)
+- [Tailwind CSS](https://tailwindcss.com/docs)
+
+### Inspirations UI/UX
+- Notion (aéré, focus)
+- Linear (transitions douces)
+- Logique "briques + strats"
+description:
+globs:
+alwaysApply: false
+---

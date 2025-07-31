@@ -1,0 +1,164 @@
+# EasyStrat - Règles de Contenu et Copywriting
+
+## Ton éditorial
+
+### Principes généraux
+- **Précis et orienté résultat** : Chaque phrase doit apporter une valeur claire
+- **Zéro jargon inutile** : Éviter le tech-speak, privilégier la simplicité
+- **Business pragmatique** : Ton professionnel avec une légère ironie quand approprié
+- **Bénéfices d'abord** : Toujours commencer par le "quoi" avant le "comment"
+
+### Registre de communication
+- Direct et actionnable
+- Légèrement ironique (quand ça fait mouche)
+- Confiant sans être arrogant
+- Humain et accessible
+
+## Messages clés et punchlines
+
+### Hooks principaux
+1. **"La stratégie n'attend pas : planifiez, reliez, exécutez."**
+2. **"Un agenda qui connaît vos données. Pas l'inverse."**
+3. **"Des briques communes, des strats métier : votre outil s'adapte à vous."**
+4. **"Inscrivez-vous, branchez vos équipes, facturez : tout est au même endroit."**
+5. **"De l'auto à l'immobilier : un seul hub, des process sur-mesure."**
+
+### Micro-copies UX
+1. **"2 minutes pour créer votre compte pro."**
+2. **"Pas prêt ? Demandez une démo guidée."**
+3. **"Changez de plan quand vous voulez."**
+4. **"Vos données, vos règles d'accès."**
+5. **"Un problème ? On replanifie pour vous."**
+
+## Structure de contenu par page
+
+### Page d'accueil
+```tsx
+// Titres et sous-titres
+const homeContent = {
+  hero: {
+    h1: "Prenez une longueur d'avance",
+    h2: "La plateforme qui transforme la stratégie en résultats concrets",
+    subtitle: "EasyStrat aligne vos objectifs, vos KPI et vos équipes en quelques clics."
+  },
+  cta: {
+    primary: "Essayer gratuitement",
+    secondary: "Voir les tarifs",
+    demo: "Demander une démo"
+  }
+}
+```
+
+### Page Solution
+```tsx
+const solutionContent = {
+  hero: {
+    h1: "Un cœur puissant. Des strats à votre image.",
+    h2: "Finance et métiers : activez ce dont vous avez besoin."
+  },
+  sections: {
+    core: "Le noyau qui relie tout",
+    finance: "Strat Finance : devis, factures, paiements",
+    business: "Strats métier : auto, immobilier, bâtiment..."
+  }
+}
+```
+
+### Pages Fonctionnalités
+```tsx
+const featuresContent = {
+  agenda: {
+    title: "Un agenda qui connaît vos données",
+    subtitle: "Vos rendez-vous ne sont plus des blocs isolés"
+  },
+  crm: {
+    title: "Du rendez-vous au revenu, sans rupture",
+    subtitle: "Pipeline simplifié avec champs personnalisables"
+  },
+  projects: {
+    title: "Du planning à l'exécution",
+    subtitle: "Kanban + jalons pour une gestion efficace"
+  }
+}
+```
+
+## Personas et ton adaptatif
+
+### CEO/Dirigeant·e de PME/ETI
+- **Ton** : Stratégique, orienté ROI
+- **Mots-clés** : vue synthétique, passage à l'action, résultats concrets
+- **Objections** : "Encore un outil ? Migration/adhésion des équipes ?"
+
+### COO/Directeur·trice des Opérations
+- **Ton** : Opérationnel, pragmatique
+- **Mots-clés** : coordination, continuité de service, efficacité
+- **Objections** : complexité des cas limites terrain
+
+### Directeur·trice Commerciale
+- **Ton** : Commercial, orienté résultats
+- **Mots-clés** : pipeline, rendez-vous, opportunités, revenus
+- **Objections** : peur d'un CRM "générique"
+
+## Narration-cadre (~200 mots)
+
+```
+Vos journées débordent d'informations : agendas saturés, projets qui glissent, 
+contacts éparpillés, décisions prises trop tard. EasyStrat commence là où vos 
+outils s'arrêtent : il relie ce qui compte. Votre rendez-vous n'est plus un 
+bloc isolé ; il connaît la ressource, le client, le projet, la contrainte terrain. 
+Le matin, vous ouvrez un agenda augmenté qui propose déjà la meilleure organisation 
+— et vous validez. Une offre acceptée déclenche le planning de production ; 
+une absence est absorbée sans chaos ; une visite se cale au bon moment, avec 
+la bonne personne, au bon endroit. Vous ne "passez pas à un nouvel outil" : 
+vous passez à un seul capteur de réalité opérationnelle, extensible par strats. 
+Aujourd'hui, vous activez la Finance ; demain, la strat Automobile ou Immobilier. 
+Même puissance, votre contexte. L'histoire qu'on raconte sur le site est simple : 
+moins d'entropie, plus d'exécution. Une plateforme qui respecte votre façon de 
+travailler et vous rend du temps. Allons droit au but : essayez, constatez, déployez.
+```
+
+## Règles de rédaction
+
+### Titres et sous-titres
+- **H1** : Maximum 6-8 mots, impact immédiat
+- **H2** : Explication du bénéfice principal
+- **Sous-titres** : Contexte et promesse
+
+### Paragraphes
+- **Longueur** : 2-3 phrases maximum par paragraphe
+- **Structure** : Problème → Solution → Bénéfice
+- **Rythme** : Alterner phrases courtes et longues
+
+### Call-to-Actions
+- **Action claire** : "Essayer", "Démarrer", "Créer"
+- **Bénéfice immédiat** : "en 2 minutes", "gratuitement"
+- **Rassurance** : "sans engagement", "annulable"
+
+## Contenu technique
+
+### Fonctionnalités
+- **Description** : Bénéfice utilisateur + exemple concret
+- **Démo** : Screenshots ou vidéos courtes
+- **Preuves** : Témoignages, métriques, cas d'usage
+
+### Secteurs métier
+- **Enjeux** : Problèmes spécifiques du secteur
+- **Flux** : Parcours utilisateur typique
+- **KPIs** : Métriques pertinentes
+- **Cas clients** : Histoires concrètes
+
+## Localisation et adaptation
+
+### Français
+- **Formalité** : Tutoiement pour l'interface, vouvoiement pour le marketing
+- **Termes techniques** : Privilégier les équivalents français
+- **Exemples** : Contextualiser pour le marché français
+
+### Accessibilité
+- **Alt text** : Descriptif et informatif
+- **Contraste** : Respecter les standards WCAG
+- **Navigation** : Clavier et lecteurs d'écran
+description:
+globs:
+alwaysApply: false
+---

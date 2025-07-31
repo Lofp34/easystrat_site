@@ -1,0 +1,171 @@
+# EasyStrat - Règles de Styling et UI
+
+## Configuration Tailwind CSS
+
+### Couleurs personnalisées
+```javascript
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        'easystrat': {
+          midnight: '#0B1E3A',    // Bleu Minuit
+          cyan: '#1BD0F2',        // Cyan Électrique
+          coral: '#FF6A5A',       // Corail Action
+          ivory: '#F8F7F4',       // Ivoire UI
+          stone: '#A9B0B8',       // Gris Pierre
+        }
+      }
+    }
+  }
+}
+```
+
+### Classes utilitaires recommandées
+- `bg-easystrat-midnight` - Fond principal
+- `text-easystrat-cyan` - Accents et liens
+- `bg-easystrat-coral` - Boutons CTA
+- `text-easystrat-stone` - Texte secondaire
+- `bg-easystrat-ivory` - Fond de contenu
+
+## Composants UI réutilisables
+
+### Boutons
+```tsx
+// Composants/Button.tsx
+interface ButtonProps {
+  variant: 'primary' | 'secondary' | 'outline'
+  size: 'sm' | 'md' | 'lg'
+  children: React.ReactNode
+  onClick?: () => void
+}
+
+// Variants :
+// primary: bg-easystrat-coral text-white
+// secondary: bg-easystrat-cyan text-white
+// outline: border-2 border-easystrat-cyan text-easystrat-cyan
+```
+
+### Cards
+```tsx
+// Composants/Card.tsx
+interface CardProps {
+  title: string
+  description: string
+  icon?: React.ReactNode
+  variant: 'feature' | 'testimonial' | 'pricing'
+}
+```
+
+### Navigation
+- Header avec logo, menu principal, CTA Connexion/Inscription
+- Footer avec liens utiles et social proof
+- Breadcrumbs pour les pages profondes
+
+## Animations et transitions
+
+### Framer Motion
+```tsx
+// Animations de base
+const fadeInUp = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.6 }
+}
+
+const staggerContainer = {
+  animate: {
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+}
+```
+
+### Effet "éclairage d'écran"
+- Gradient radial sur les éléments hero
+- Animation de glow sur les CTA
+- Transitions douces entre les sections
+
+## Responsive Design
+
+### Breakpoints
+- Mobile: `< 768px`
+- Tablet: `768px - 1024px`
+- Desktop: `> 1024px`
+
+### Grilles
+- Mobile: 1 colonne
+- Tablet: 2 colonnes
+- Desktop: 3-4 colonnes selon le contenu
+
+## Typographie
+
+### Hiérarchie
+- H1: `text-4xl md:text-6xl font-bold`
+- H2: `text-3xl md:text-4xl font-semibold`
+- H3: `text-2xl md:text-3xl font-semibold`
+- Body: `text-base md:text-lg`
+- Small: `text-sm`
+
+### Fonts
+```css
+/* Inter pour tout le texte */
+font-family: 'Inter', sans-serif;
+```
+
+## Spacing et Layout
+
+### Système d'espacement
+- Container max-width: `max-w-7xl mx-auto px-4 md:px-6 lg:px-8`
+- Section padding: `py-16 md:py-24`
+- Gap entre éléments: `space-y-8 md:space-y-12`
+
+### Grid layouts
+```tsx
+// Grille de fonctionnalités
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+```
+
+## États et interactions
+
+### Hover states
+- Boutons: `hover:scale-105 transition-transform`
+- Cards: `hover:shadow-lg transition-shadow`
+- Liens: `hover:text-easystrat-cyan transition-colors`
+
+### Focus states
+- Accessibilité obligatoire
+- `focus:ring-2 focus:ring-easystrat-cyan focus:outline-none`
+
+## Icônes et pictos
+
+### Style
+- Linéaires et minimalistes
+- Taille cohérente: `w-6 h-6` par défaut
+- Couleur: `text-easystrat-stone` ou `text-easystrat-cyan`
+
+### Bibliothèque recommandée
+- Lucide React ou Heroicons
+- Pictos personnalisés pour les "strats"
+
+## Dark mode (optionnel)
+
+### Classes conditionnelles
+```tsx
+// Support basique du dark mode
+className="bg-easystrat-ivory dark:bg-easystrat-midnight"
+```
+
+## Performance
+
+### Optimisations
+- Lazy loading des images
+- Composants optimisés avec `React.memo`
+- CSS-in-JS minimal (préférer Tailwind)
+- Animations avec `will-change` quand nécessaire
+description:
+globs:
+alwaysApply: false
+---
