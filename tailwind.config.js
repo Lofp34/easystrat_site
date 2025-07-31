@@ -18,7 +18,7 @@ module.exports = {
           'cyan-light': '#4DDEFF',
           'coral-light': '#FF8A7A',
           'purple-accent': '#8B5FBF',   // Nouveaux accents
-          'emerald-accent': '#10B981',
+          'emerald-accent': '#1BD0F2',
         }
       },
       fontFamily: {

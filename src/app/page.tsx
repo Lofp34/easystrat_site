@@ -80,7 +80,7 @@ export default function HomePage() {
                   🚀 La révolution stratégique arrive
                 </AnimatedText>
                 
-                <AnimatedText as="h1" className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+                <AnimatedText as="h1" className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
                   <span className="sr-only">Transformez vos idées en victoires avec EasyStrat</span>
                   <span aria-hidden="true">
                     <span className="bg-gradient-to-r from-white via-easystrat-cyan-light to-easystrat-coral-light bg-clip-text text-transparent">
@@ -89,9 +89,9 @@ export default function HomePage() {
                     <br />
                     <span className="text-white">vos idées en</span>
                     <br />
-                    <span className="bg-gradient-to-r from-easystrat-cyan to-easystrat-emerald-accent bg-clip-text text-transparent">
-                      victoires
-                    </span>
+                                      <span className="bg-gradient-to-r from-easystrat-cyan to-easystrat-coral bg-clip-text text-transparent">
+                    victoires
+                  </span>
                   </span>
                 </AnimatedText>
                 
@@ -276,7 +276,7 @@ export default function HomePage() {
               <div className="group relative h-64 bg-gradient-to-br from-easystrat-emerald-accent/5 via-white to-easystrat-emerald-accent/10 rounded-2xl p-6 border border-easystrat-emerald-accent/20 overflow-hidden hover:shadow-2xl hover:shadow-easystrat-emerald-accent/20 transition-all duration-500">
                 <div className="absolute inset-0 bg-gradient-to-br from-easystrat-emerald-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="relative z-10">
-                  <div className="w-10 h-10 bg-gradient-to-r from-easystrat-emerald-accent to-easystrat-cyan rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-10 h-10 bg-gradient-to-r from-easystrat-coral to-easystrat-cyan rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <CreditCard className="w-5 h-5 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-easystrat-midnight mb-3">Strat Finance</h3>
