@@ -23,14 +23,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://easystrat.com'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://easystrat-site.vercel.app'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: 'EasyStrat - Plateforme SaaS pour PME | Agenda, CRM, Projets',
     description: 'Plateforme SaaS tout-en-un pour PME et ETI : agenda intelligent, CRM automatisé, gestion de projets. Strats métier spécialisées. Essai gratuit.',
-    url: 'https://easystrat.com',
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://easystrat-site.vercel.app',
     siteName: 'EasyStrat',
     images: [
       {

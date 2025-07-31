@@ -9,16 +9,16 @@ const StructuredData = () => {
     "applicationSubCategory": "CRM, Project Management, Business Productivity",
     "operatingSystem": "Web Browser",
     "description": "Plateforme SaaS tout-en-un qui synchronise agendas, CRM, projets et opérations pour PME et ETI. Strats métier spécialisées par secteur.",
-    "url": "https://easystrat.com",
-    "screenshot": "https://easystrat.com/images/app-screenshot.jpg",
+    "url": process.env.NEXT_PUBLIC_SITE_URL || "https://easystrat-site.vercel.app",
+    "screenshot": `${process.env.NEXT_PUBLIC_SITE_URL || "https://easystrat-site.vercel.app"}/images/app-screenshot.jpg`,
     "softwareVersion": "1.0",
     "datePublished": "2024-01-01",
     "dateModified": new Date().toISOString().split('T')[0],
     "author": {
       "@type": "Organization",
       "name": "EasyStrat",
-      "url": "https://easystrat.com",
-      "logo": "https://easystrat.com/images/logo.png",
+      "url": process.env.NEXT_PUBLIC_SITE_URL || "https://easystrat-site.vercel.app",
+      "logo": `${process.env.NEXT_PUBLIC_SITE_URL || "https://easystrat-site.vercel.app"}/images/logo.png`,
       "sameAs": [
         "https://www.linkedin.com/company/easystrat",
         "https://twitter.com/easystrat"
@@ -29,7 +29,7 @@ const StructuredData = () => {
       "name": "EasyStrat",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://easystrat.com/images/logo.png"
+        "url": `${process.env.NEXT_PUBLIC_SITE_URL || "https://easystrat-site.vercel.app"}/images/logo.png`
       }
     },
     "offers": {
@@ -70,7 +70,7 @@ const StructuredData = () => {
         "@type": "ListItem",
         "position": 1,
         "name": "Accueil",
-        "item": "https://easystrat.com"
+        "item": process.env.NEXT_PUBLIC_SITE_URL || "https://easystrat-site.vercel.app"
       }
     ]
   }

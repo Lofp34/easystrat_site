@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://easystrat.com/sitemap.xml
+Sitemap: https://easystrat-site.vercel.app/sitemap.xml
 
 # Disallow admin areas (when they exist)
 Disallow: /admin/
