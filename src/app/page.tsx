@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { Calendar, Users, BarChart3, CreditCard, ArrowRight, Play, Star } from 'lucide-react'
+import { Calendar, Users, BarChart3, CreditCard, ArrowRight, Play, Star, Bell, Shield, TrendingUp, Zap } from 'lucide-react'
 import Button from '@/components/ui/Button'
 import Card, { CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/Card'
 import AnimatedSection from '@/components/ui/AnimatedSection'
@@ -181,13 +181,13 @@ export default function HomePage() {
       </section>
 
       {/* Features Preview */}
-      <section className="section-padding bg-gradient-to-br from-easystrat-ivory via-white to-easystrat-ivory">
+      <section className="py-32 bg-gradient-to-br from-easystrat-ivory via-white to-easystrat-ivory">
         <div className="container-easystrat">
-          <AnimatedSection className="text-center mb-20">
-            <div className="inline-block px-4 py-2 bg-easystrat-cyan/10 rounded-full border border-easystrat-cyan/20 text-easystrat-cyan text-sm mb-6">
+          <AnimatedSection className="text-center mb-24">
+            <div className="inline-block px-6 py-3 bg-easystrat-cyan/10 rounded-full border border-easystrat-cyan/20 text-easystrat-cyan text-sm font-medium mb-8">
               🎯 Fonctionnalités puissantes
             </div>
-            <h2 className="text-4xl md:text-6xl font-bold mb-8">
+            <h2 className="text-5xl md:text-7xl font-bold mb-12 leading-tight">
               <span className="sr-only">Un hub, des strats, zéro friction - Fonctionnalités EasyStrat</span>
               <span aria-hidden="true">
                 <span className="bg-gradient-to-r from-easystrat-midnight via-easystrat-cyan to-easystrat-coral bg-clip-text text-transparent">
@@ -197,96 +197,187 @@ export default function HomePage() {
                 <span className="text-easystrat-midnight">zéro friction</span>
               </span>
             </h2>
-            <p className="text-xl text-easystrat-stone max-w-3xl mx-auto leading-relaxed">
+            <p className="text-2xl text-easystrat-stone max-w-4xl mx-auto leading-relaxed font-light">
               Des briques communes, des strats métier : votre outil s'adapte à vous et grandit avec vos ambitions.
             </p>
           </AnimatedSection>
 
-          {/* Bento Grid Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-6 max-w-7xl mx-auto">
+          {/* Apple-inspired Layout */}
+          <div className="space-y-24">
             
-            {/* Large feature card - Agenda */}
-            <AnimatedSection className="md:col-span-6 lg:col-span-7" delay={0.1}>
-              <div className="group relative h-80 bg-gradient-to-br from-easystrat-cyan/5 via-white to-easystrat-cyan/10 rounded-2xl p-8 border border-easystrat-cyan/20 overflow-hidden hover:shadow-2xl hover:shadow-easystrat-cyan/20 transition-all duration-500">
-                <div className="absolute inset-0 bg-gradient-to-br from-easystrat-cyan/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="relative z-10">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-r from-easystrat-cyan to-easystrat-cyan-light rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <Calendar className="w-6 h-6 text-white" />
+            {/* Hero Feature - Agenda */}
+            <AnimatedSection className="max-w-6xl mx-auto" delay={0.1}>
+              <div className="text-center mb-16">
+                <div className="w-20 h-20 bg-gradient-to-r from-easystrat-cyan to-easystrat-cyan-light rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-500">
+                  <Calendar className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-4xl md:text-5xl font-bold text-easystrat-midnight mb-6">
+                  Agenda augmenté
+                </h3>
+                <p className="text-xl text-easystrat-stone max-w-3xl mx-auto leading-relaxed">
+                  Un agenda qui connaît vos données. Pas l'inverse. Synchronisation totale avec vos KPI et objectifs.
+                </p>
+              </div>
+              
+              <div className="relative">
+                {/* Background glow */}
+                <div className="absolute inset-0 bg-gradient-to-r from-easystrat-cyan/10 via-transparent to-easystrat-coral/10 rounded-3xl blur-3xl"></div>
+                
+                {/* Main card */}
+                <div className="relative bg-white/80 backdrop-blur-xl rounded-3xl p-12 border border-white/20 shadow-2xl">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div className="space-y-8">
+                      <div className="space-y-6">
+                        <div className="flex items-center gap-4">
+                          <div className="w-3 h-3 bg-easystrat-cyan rounded-full"></div>
+                          <span className="text-lg font-medium text-easystrat-midnight">Synchronisation intelligente</span>
+                        </div>
+                        <div className="flex items-center gap-4">
+                          <div className="w-3 h-3 bg-easystrat-coral rounded-full"></div>
+                          <span className="text-lg font-medium text-easystrat-midnight">Prédiction des conflits</span>
+                        </div>
+                        <div className="flex items-center gap-4">
+                          <div className="w-3 h-3 bg-easystrat-purple-accent rounded-full"></div>
+                          <span className="text-lg font-medium text-easystrat-midnight">Optimisation automatique</span>
+                        </div>
+                      </div>
+                      
+                      <div className="grid grid-cols-2 gap-6">
+                        <div className="bg-gradient-to-br from-easystrat-cyan/10 to-easystrat-cyan/5 rounded-2xl p-6 border border-easystrat-cyan/20">
+                          <div className="text-easystrat-cyan text-3xl font-bold mb-2">+73%</div>
+                          <div className="text-sm text-easystrat-stone font-medium">Efficacité planning</div>
+                        </div>
+                        <div className="bg-gradient-to-br from-easystrat-coral/10 to-easystrat-coral/5 rounded-2xl p-6 border border-easystrat-coral/20">
+                          <div className="text-easystrat-coral text-3xl font-bold mb-2">-85%</div>
+                          <div className="text-sm text-easystrat-stone font-medium">Conflits d'agenda</div>
+                        </div>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-easystrat-midnight">Agenda augmenté</h3>
-                      <p className="text-easystrat-stone">Intelligence intégrée</p>
-                    </div>
-                  </div>
-                  <p className="text-lg text-easystrat-midnight/80 mb-6">
-                    Un agenda qui connaît vos données. Pas l'inverse. Synchronisation totale avec vos KPI et objectifs.
-                  </p>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-white/50 rounded-lg p-4 border border-easystrat-cyan/10">
-                      <div className="text-easystrat-cyan text-xl font-bold">+73%</div>
-                      <div className="text-sm text-easystrat-stone">Efficacité planning</div>
-                    </div>
-                    <div className="bg-white/50 rounded-lg p-4 border border-easystrat-cyan/10">
-                      <div className="text-easystrat-cyan text-xl font-bold">-85%</div>
-                      <div className="text-sm text-easystrat-stone">Conflits d'agenda</div>
+                    
+                    <div className="relative">
+                      <div className="bg-gradient-to-br from-easystrat-midnight/5 to-easystrat-cyan/5 rounded-2xl p-8 border border-easystrat-cyan/20">
+                        <div className="space-y-4">
+                          <div className="h-6 bg-gradient-to-r from-easystrat-cyan/30 to-transparent rounded-lg"></div>
+                          <div className="h-6 bg-gradient-to-r from-easystrat-coral/30 to-transparent rounded-lg w-4/5"></div>
+                          <div className="h-6 bg-gradient-to-r from-easystrat-purple-accent/30 to-transparent rounded-lg w-3/5"></div>
+                        </div>
+                        <div className="mt-6 grid grid-cols-3 gap-3">
+                          <div className="h-16 bg-easystrat-cyan/20 rounded-lg"></div>
+                          <div className="h-16 bg-easystrat-coral/20 rounded-lg"></div>
+                          <div className="h-16 bg-easystrat-purple-accent/20 rounded-lg"></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </AnimatedSection>
 
-            {/* Medium feature cards */}
-            <AnimatedSection className="md:col-span-3 lg:col-span-5" delay={0.2}>
-              <div className="group relative h-80 bg-gradient-to-br from-easystrat-coral/5 via-white to-easystrat-coral/10 rounded-2xl p-8 border border-easystrat-coral/20 overflow-hidden hover:shadow-2xl hover:shadow-easystrat-coral/20 transition-all duration-500">
-                <div className="absolute inset-0 bg-gradient-to-br from-easystrat-coral/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="relative z-10">
-                  <div className="w-12 h-12 bg-gradient-to-r from-easystrat-coral to-easystrat-coral-light rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <Users className="w-6 h-6 text-white" />
+            {/* Secondary Features Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
+              
+              {/* CRM */}
+              <AnimatedSection delay={0.2}>
+                <div className="group text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-easystrat-coral to-easystrat-coral-light rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-500">
+                    <Users className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-easystrat-midnight mb-4">CRM intelligent</h3>
-                  <p className="text-easystrat-midnight/80 mb-6">
+                  <p className="text-easystrat-stone mb-8 leading-relaxed">
                     Du rendez-vous au revenu, sans rupture. Pipeline automatisé et suivi en temps réel.
                   </p>
-                  <div className="bg-white/50 rounded-lg p-4 border border-easystrat-coral/10">
-                    <div className="text-easystrat-coral text-xl font-bold">+156%</div>
-                    <div className="text-sm text-easystrat-stone">Conversion leads</div>
+                  <div className="bg-gradient-to-br from-easystrat-coral/10 to-easystrat-coral/5 rounded-2xl p-6 border border-easystrat-coral/20">
+                    <div className="text-easystrat-coral text-2xl font-bold mb-2">+156%</div>
+                    <div className="text-sm text-easystrat-stone font-medium">Conversion leads</div>
                   </div>
                 </div>
-              </div>
-            </AnimatedSection>
+              </AnimatedSection>
 
-            {/* Small feature cards */}
-            <AnimatedSection className="md:col-span-3 lg:col-span-6" delay={0.3}>
-              <div className="group relative h-64 bg-gradient-to-br from-easystrat-purple-accent/5 via-white to-easystrat-purple-accent/10 rounded-2xl p-6 border border-easystrat-purple-accent/20 overflow-hidden hover:shadow-2xl hover:shadow-easystrat-purple-accent/20 transition-all duration-500">
-                <div className="absolute inset-0 bg-gradient-to-br from-easystrat-purple-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="relative z-10">
-                  <div className="w-10 h-10 bg-gradient-to-r from-easystrat-purple-accent to-easystrat-emerald-accent rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <BarChart3 className="w-5 h-5 text-white" />
+              {/* Project Management */}
+              <AnimatedSection delay={0.3}>
+                <div className="group text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-easystrat-purple-accent to-easystrat-emerald-accent rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-500">
+                    <BarChart3 className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-easystrat-midnight mb-3">Gestion de projet</h3>
-                  <p className="text-easystrat-midnight/80">
-                    Du planning à l'exécution, tout est connecté.
+                  <h3 className="text-2xl font-bold text-easystrat-midnight mb-4">Gestion de projet</h3>
+                  <p className="text-easystrat-stone mb-8 leading-relaxed">
+                    Du planning à l'exécution, tout est connecté. Suivi en temps réel et alertes intelligentes.
                   </p>
-                </div>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection className="md:col-span-3 lg:col-span-6" delay={0.4}>
-              <div className="group relative h-64 bg-gradient-to-br from-easystrat-emerald-accent/5 via-white to-easystrat-emerald-accent/10 rounded-2xl p-6 border border-easystrat-emerald-accent/20 overflow-hidden hover:shadow-2xl hover:shadow-easystrat-emerald-accent/20 transition-all duration-500">
-                <div className="absolute inset-0 bg-gradient-to-br from-easystrat-emerald-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="relative z-10">
-                  <div className="w-10 h-10 bg-gradient-to-r from-easystrat-coral to-easystrat-cyan rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <CreditCard className="w-5 h-5 text-white" />
+                  <div className="bg-gradient-to-br from-easystrat-purple-accent/10 to-easystrat-purple-accent/5 rounded-2xl p-6 border border-easystrat-purple-accent/20">
+                    <div className="text-easystrat-purple-accent text-2xl font-bold mb-2">+89%</div>
+                    <div className="text-sm text-easystrat-stone font-medium">Livraison à temps</div>
                   </div>
-                  <h3 className="text-xl font-bold text-easystrat-midnight mb-3">Strat Finance</h3>
-                  <p className="text-easystrat-midnight/80">
-                    Devis, factures, paiements : tout suit automatiquement.
-                  </p>
                 </div>
-              </div>
-            </AnimatedSection>
+              </AnimatedSection>
 
+              {/* Notifications */}
+              <AnimatedSection delay={0.4}>
+                <div className="group text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-easystrat-coral to-easystrat-cyan rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-500">
+                    <Bell className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-easystrat-midnight mb-4">Notifications & alertes</h3>
+                  <p className="text-easystrat-stone mb-8 leading-relaxed">
+                    Restez informé sans être submergé. Alertes intelligentes et personnalisables.
+                  </p>
+                  <div className="bg-gradient-to-br from-easystrat-emerald-accent/10 to-easystrat-emerald-accent/5 rounded-2xl p-6 border border-easystrat-emerald-accent/20">
+                    <div className="text-easystrat-emerald-accent text-2xl font-bold mb-2">-92%</div>
+                    <div className="text-sm text-easystrat-stone font-medium">Temps de réaction</div>
+                  </div>
+                </div>
+              </AnimatedSection>
+
+              {/* Data Governance */}
+              <AnimatedSection delay={0.5}>
+                <div className="group text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-easystrat-midnight to-easystrat-cyan rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-500">
+                    <Shield className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-easystrat-midnight mb-4">Gouvernance des données</h3>
+                  <p className="text-easystrat-stone mb-8 leading-relaxed">
+                    Contrôle total sur vos données avec des rôles granulaires et une traçabilité complète.
+                  </p>
+                  <div className="bg-gradient-to-br from-easystrat-midnight/10 to-easystrat-midnight/5 rounded-2xl p-6 border border-easystrat-midnight/20">
+                    <div className="text-easystrat-midnight text-2xl font-bold mb-2">100%</div>
+                    <div className="text-sm text-easystrat-stone font-medium">Conformité RGPD</div>
+                  </div>
+                </div>
+              </AnimatedSection>
+
+              {/* Strat Finance */}
+              <AnimatedSection delay={0.6}>
+                <div className="group text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-easystrat-emerald-accent to-easystrat-cyan rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-500">
+                    <TrendingUp className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-easystrat-midnight mb-4">Strat Finance</h3>
+                  <p className="text-easystrat-stone mb-8 leading-relaxed">
+                    Pilotage financier intégré avec tableaux de bord temps réel et prévisions intelligentes.
+                  </p>
+                  <div className="bg-gradient-to-br from-easystrat-emerald-accent/10 to-easystrat-emerald-accent/5 rounded-2xl p-6 border border-easystrat-emerald-accent/20">
+                    <div className="text-easystrat-emerald-accent text-2xl font-bold mb-2">+234%</div>
+                    <div className="text-sm text-easystrat-stone font-medium">ROI moyen</div>
+                  </div>
+                </div>
+              </AnimatedSection>
+
+              {/* Strats Métier */}
+              <AnimatedSection delay={0.7}>
+                <div className="group text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-easystrat-purple-accent to-easystrat-coral rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-500">
+                    <Zap className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-easystrat-midnight mb-4">Strats Métier</h3>
+                  <p className="text-easystrat-stone mb-8 leading-relaxed">
+                    Automobile, Immobilier, Santé... Des solutions adaptées à chaque secteur d'activité.
+                  </p>
+                  <div className="bg-gradient-to-br from-easystrat-purple-accent/10 to-easystrat-purple-accent/5 rounded-2xl p-6 border border-easystrat-purple-accent/20">
+                    <div className="text-easystrat-purple-accent text-2xl font-bold mb-2">15+</div>
+                    <div className="text-sm text-easystrat-stone font-medium">Secteurs couverts</div>
+                  </div>
+                </div>
+              </AnimatedSection>
+            </div>
           </div>
         </div>
       </section>
