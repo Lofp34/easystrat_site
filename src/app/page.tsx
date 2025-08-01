@@ -59,28 +59,22 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-easystrat-ivory">
       {/* Hero Section */}
-      <section className="relative overflow-hidden min-h-screen flex items-center">
-        {/* Aurora Background */}
+      <section className="relative overflow-hidden min-h-screen flex items-center py-section-hero">
         <div className="absolute inset-0 bg-gradient-to-br from-easystrat-midnight via-easystrat-midnight-light to-easystrat-purple-accent animate-aurora bg-[length:400%_400%]"></div>
-        
-        {/* Floating elements */}
         <div className="absolute top-20 left-10 w-32 h-32 bg-easystrat-cyan/10 rounded-full blur-xl animate-float"></div>
         <div className="absolute top-40 right-20 w-24 h-24 bg-easystrat-coral/10 rounded-full blur-xl animate-float" style={{animationDelay: '2s'}}></div>
         <div className="absolute bottom-20 left-1/4 w-20 h-20 bg-easystrat-emerald-accent/10 rounded-full blur-xl animate-float" style={{animationDelay: '4s'}}></div>
-        
-        {/* Mesh gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-easystrat-midnight/50 via-transparent to-easystrat-midnight/20"></div>
         
         <div className="container-easystrat relative z-10 text-white">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              {/* Left content */}
               <div className="text-center lg:text-left">
-                <AnimatedText as="div" className="inline-block px-4 py-2 bg-easystrat-cyan/10 rounded-full border border-easystrat-cyan/20 text-easystrat-cyan-light text-sm mb-6">
+                <AnimatedText as="div" className="inline-block px-4 py-2 bg-easystrat-cyan/10 rounded-full border border-easystrat-cyan/20 text-easystrat-cyan-light text-caption font-medium mb-6">
                   🚀 La révolution stratégique arrive
                 </AnimatedText>
                 
-                <AnimatedText as="h1" className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+                <AnimatedText as="h1" className="text-hero font-bold mb-8">
                   <span className="sr-only">Transformez vos idées en victoires avec EasyStrat</span>
                   <span aria-hidden="true">
                     <span className="bg-gradient-to-r from-white via-easystrat-cyan-light to-easystrat-coral-light bg-clip-text text-transparent">
@@ -89,20 +83,20 @@ export default function HomePage() {
                     <br />
                     <span className="text-white">vos idées en</span>
                     <br />
-                                      <span className="bg-gradient-to-r from-easystrat-cyan to-easystrat-coral bg-clip-text text-transparent">
-                    victoires
-                  </span>
+                    <span className="bg-gradient-to-r from-easystrat-cyan to-easystrat-coral bg-clip-text text-transparent">
+                      victoires
+                    </span>
                   </span>
                 </AnimatedText>
                 
-                <AnimatedText as="p" className="text-xl md:text-2xl mb-12 text-easystrat-stone leading-relaxed max-w-2xl" delay={0.1}>
+                <AnimatedText as="p" className="text-body-large mb-12 text-easystrat-stone leading-relaxed max-w-2xl" delay={0.1}>
                   La plateforme tout-en-un qui synchronise vos objectifs, automatise vos process et booste vos performances.
                 </AnimatedText>
                 
                 <AnimatedSection className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start" delay={0.2}>
                   <Button 
                     size="lg" 
-                    className="bg-gradient-to-r from-easystrat-cyan to-easystrat-emerald-accent hover:scale-105 transform transition-all duration-300 text-lg px-8 py-4"
+                    className="bg-gradient-to-r from-easystrat-cyan to-easystrat-emerald-accent hover:scale-105 transform transition-all duration-300 text-body px-8 py-4"
                     icon={<ArrowRight className="w-6 h-6" />}
                   >
                     Commencer gratuitement
@@ -110,7 +104,7 @@ export default function HomePage() {
                   <Button 
                     variant="outline" 
                     size="lg" 
-                    className="border-2 border-easystrat-cyan-light text-easystrat-cyan-light hover:bg-easystrat-cyan-light hover:text-easystrat-midnight transition-all duration-300 text-lg px-8 py-4"
+                    className="border-2 border-easystrat-cyan-light text-easystrat-cyan-light hover:bg-easystrat-cyan-light hover:text-easystrat-midnight transition-all duration-300 text-body px-8 py-4"
                     icon={<Play className="w-6 h-6" />}
                   >
                     Voir la démo
@@ -123,7 +117,7 @@ export default function HomePage() {
                     <div className="w-10 h-10 rounded-full bg-gradient-to-r from-easystrat-coral to-easystrat-purple-accent border-2 border-white"></div>
                     <div className="w-10 h-10 rounded-full bg-gradient-to-r from-easystrat-purple-accent to-easystrat-emerald-accent border-2 border-white"></div>
                   </div>
-                  <div className="text-sm text-easystrat-stone">
+                  <div className="text-small text-easystrat-stone">
                     <div className="font-semibold text-white">+2,500 équipes</div>
                     <div>nous font déjà confiance</div>
                   </div>
@@ -173,7 +167,7 @@ export default function HomePage() {
       {/* Social Proof */}
       <section className="py-12 bg-white">
         <div className="container-easystrat text-center mb-8">
-          <AnimatedText as="p" className="text-easystrat-stone text-lg">
+          <AnimatedText as="p" className="text-easystrat-stone text-body">
             Ils nous font confiance
           </AnimatedText>
         </div>
@@ -181,13 +175,13 @@ export default function HomePage() {
       </section>
 
       {/* Features Preview */}
-      <section className="py-32 bg-gradient-to-br from-easystrat-ivory via-white to-easystrat-ivory">
+      <section className="py-section-features bg-gradient-to-br from-easystrat-ivory via-white to-easystrat-ivory">
         <div className="container-easystrat">
           <AnimatedSection className="text-center mb-24">
-            <div className="inline-block px-6 py-3 bg-easystrat-cyan/10 rounded-full border border-easystrat-cyan/20 text-easystrat-cyan text-sm font-medium mb-8">
+            <div className="inline-block px-6 py-3 bg-easystrat-cyan/10 rounded-full border border-easystrat-cyan/20 text-easystrat-cyan text-caption font-medium mb-8">
               🎯 Fonctionnalités puissantes
             </div>
-            <h2 className="text-5xl md:text-7xl font-bold mb-12 leading-tight">
+            <h2 className="text-display font-bold mb-12">
               <span className="sr-only">Un hub, des strats, zéro friction - Fonctionnalités EasyStrat</span>
               <span aria-hidden="true">
                 <span className="bg-gradient-to-r from-easystrat-midnight via-easystrat-cyan to-easystrat-coral bg-clip-text text-transparent">
@@ -197,7 +191,7 @@ export default function HomePage() {
                 <span className="text-easystrat-midnight">zéro friction</span>
               </span>
             </h2>
-            <p className="text-2xl text-easystrat-stone max-w-4xl mx-auto leading-relaxed font-light">
+            <p className="text-body-large text-easystrat-stone max-w-4xl mx-auto leading-relaxed font-light">
               Des briques communes, des strats métier : votre outil s'adapte à vous et grandit avec vos ambitions.
             </p>
           </AnimatedSection>
@@ -211,10 +205,10 @@ export default function HomePage() {
                 <div className="w-20 h-20 bg-gradient-to-r from-easystrat-cyan to-easystrat-cyan-light rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-500">
                   <Calendar className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-4xl md:text-5xl font-bold text-easystrat-midnight mb-6">
+                <h3 className="text-headline font-bold text-easystrat-midnight mb-6">
                   Agenda augmenté
                 </h3>
-                <p className="text-xl text-easystrat-stone max-w-3xl mx-auto leading-relaxed">
+                <p className="text-body text-easystrat-stone max-w-3xl mx-auto leading-relaxed">
                   Un agenda qui connaît vos données. Pas l'inverse. Synchronisation totale avec vos KPI et objectifs.
                 </p>
               </div>
@@ -230,26 +224,26 @@ export default function HomePage() {
                       <div className="space-y-6">
                         <div className="flex items-center gap-4">
                           <div className="w-3 h-3 bg-easystrat-cyan rounded-full"></div>
-                          <span className="text-lg font-medium text-easystrat-midnight">Synchronisation intelligente</span>
+                          <span className="text-body font-medium text-easystrat-midnight">Synchronisation intelligente</span>
                         </div>
                         <div className="flex items-center gap-4">
                           <div className="w-3 h-3 bg-easystrat-coral rounded-full"></div>
-                          <span className="text-lg font-medium text-easystrat-midnight">Prédiction des conflits</span>
+                          <span className="text-body font-medium text-easystrat-midnight">Prédiction des conflits</span>
                         </div>
                         <div className="flex items-center gap-4">
                           <div className="w-3 h-3 bg-easystrat-purple-accent rounded-full"></div>
-                          <span className="text-lg font-medium text-easystrat-midnight">Optimisation automatique</span>
+                          <span className="text-body font-medium text-easystrat-midnight">Optimisation automatique</span>
                         </div>
                       </div>
                       
                       <div className="grid grid-cols-2 gap-6">
                         <div className="bg-gradient-to-br from-easystrat-cyan/10 to-easystrat-cyan/5 rounded-2xl p-6 border border-easystrat-cyan/20">
                           <div className="text-easystrat-cyan text-3xl font-bold mb-2">+73%</div>
-                          <div className="text-sm text-easystrat-stone font-medium">Efficacité planning</div>
+                          <div className="text-caption text-easystrat-stone font-medium">Efficacité planning</div>
                         </div>
                         <div className="bg-gradient-to-br from-easystrat-coral/10 to-easystrat-coral/5 rounded-2xl p-6 border border-easystrat-coral/20">
                           <div className="text-easystrat-coral text-3xl font-bold mb-2">-85%</div>
-                          <div className="text-sm text-easystrat-stone font-medium">Conflits d'agenda</div>
+                          <div className="text-caption text-easystrat-stone font-medium">Conflits d'agenda</div>
                         </div>
                       </div>
                     </div>
@@ -282,13 +276,13 @@ export default function HomePage() {
                   <div className="w-16 h-16 bg-gradient-to-r from-easystrat-coral to-easystrat-coral-light rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-500">
                     <Users className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-easystrat-midnight mb-4">CRM intelligent</h3>
-                  <p className="text-easystrat-stone mb-8 leading-relaxed">
+                  <h3 className="text-title font-bold text-easystrat-midnight mb-4">CRM intelligent</h3>
+                  <p className="text-body text-easystrat-stone mb-8 leading-relaxed">
                     Du rendez-vous au revenu, sans rupture. Pipeline automatisé et suivi en temps réel.
                   </p>
                   <div className="bg-gradient-to-br from-easystrat-coral/10 to-easystrat-coral/5 rounded-2xl p-6 border border-easystrat-coral/20">
                     <div className="text-easystrat-coral text-2xl font-bold mb-2">+156%</div>
-                    <div className="text-sm text-easystrat-stone font-medium">Conversion leads</div>
+                    <div className="text-caption text-easystrat-stone font-medium">Conversion leads</div>
                   </div>
                 </div>
               </AnimatedSection>
@@ -299,13 +293,13 @@ export default function HomePage() {
                   <div className="w-16 h-16 bg-gradient-to-r from-easystrat-purple-accent to-easystrat-emerald-accent rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-500">
                     <BarChart3 className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-easystrat-midnight mb-4">Gestion de projet</h3>
-                  <p className="text-easystrat-stone mb-8 leading-relaxed">
+                  <h3 className="text-title font-bold text-easystrat-midnight mb-4">Gestion de projet</h3>
+                  <p className="text-body text-easystrat-stone mb-8 leading-relaxed">
                     Du planning à l'exécution, tout est connecté. Suivi en temps réel et alertes intelligentes.
                   </p>
                   <div className="bg-gradient-to-br from-easystrat-purple-accent/10 to-easystrat-purple-accent/5 rounded-2xl p-6 border border-easystrat-purple-accent/20">
                     <div className="text-easystrat-purple-accent text-2xl font-bold mb-2">+89%</div>
-                    <div className="text-sm text-easystrat-stone font-medium">Livraison à temps</div>
+                    <div className="text-caption text-easystrat-stone font-medium">Livraison à temps</div>
                   </div>
                 </div>
               </AnimatedSection>
@@ -316,13 +310,13 @@ export default function HomePage() {
                   <div className="w-16 h-16 bg-gradient-to-r from-easystrat-coral to-easystrat-cyan rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-500">
                     <Bell className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-easystrat-midnight mb-4">Notifications & alertes</h3>
-                  <p className="text-easystrat-stone mb-8 leading-relaxed">
+                  <h3 className="text-title font-bold text-easystrat-midnight mb-4">Notifications & alertes</h3>
+                  <p className="text-body text-easystrat-stone mb-8 leading-relaxed">
                     Restez informé sans être submergé. Alertes intelligentes et personnalisables.
                   </p>
                   <div className="bg-gradient-to-br from-easystrat-emerald-accent/10 to-easystrat-emerald-accent/5 rounded-2xl p-6 border border-easystrat-emerald-accent/20">
                     <div className="text-easystrat-emerald-accent text-2xl font-bold mb-2">-92%</div>
-                    <div className="text-sm text-easystrat-stone font-medium">Temps de réaction</div>
+                    <div className="text-caption text-easystrat-stone font-medium">Temps de réaction</div>
                   </div>
                 </div>
               </AnimatedSection>
@@ -333,13 +327,13 @@ export default function HomePage() {
                   <div className="w-16 h-16 bg-gradient-to-r from-easystrat-midnight to-easystrat-cyan rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-500">
                     <Shield className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-easystrat-midnight mb-4">Gouvernance des données</h3>
-                  <p className="text-easystrat-stone mb-8 leading-relaxed">
+                  <h3 className="text-title font-bold text-easystrat-midnight mb-4">Gouvernance des données</h3>
+                  <p className="text-body text-easystrat-stone mb-8 leading-relaxed">
                     Contrôle total sur vos données avec des rôles granulaires et une traçabilité complète.
                   </p>
                   <div className="bg-gradient-to-br from-easystrat-midnight/10 to-easystrat-midnight/5 rounded-2xl p-6 border border-easystrat-midnight/20">
                     <div className="text-easystrat-midnight text-2xl font-bold mb-2">100%</div>
-                    <div className="text-sm text-easystrat-stone font-medium">Conformité RGPD</div>
+                    <div className="text-caption text-easystrat-stone font-medium">Conformité RGPD</div>
                   </div>
                 </div>
               </AnimatedSection>
@@ -350,13 +344,13 @@ export default function HomePage() {
                   <div className="w-16 h-16 bg-gradient-to-r from-easystrat-emerald-accent to-easystrat-cyan rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-500">
                     <TrendingUp className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-easystrat-midnight mb-4">Strat Finance</h3>
-                  <p className="text-easystrat-stone mb-8 leading-relaxed">
+                  <h3 className="text-title font-bold text-easystrat-midnight mb-4">Strat Finance</h3>
+                  <p className="text-body text-easystrat-stone mb-8 leading-relaxed">
                     Pilotage financier intégré avec tableaux de bord temps réel et prévisions intelligentes.
                   </p>
                   <div className="bg-gradient-to-br from-easystrat-emerald-accent/10 to-easystrat-emerald-accent/5 rounded-2xl p-6 border border-easystrat-emerald-accent/20">
                     <div className="text-easystrat-emerald-accent text-2xl font-bold mb-2">+234%</div>
-                    <div className="text-sm text-easystrat-stone font-medium">ROI moyen</div>
+                    <div className="text-caption text-easystrat-stone font-medium">ROI moyen</div>
                   </div>
                 </div>
               </AnimatedSection>
@@ -367,13 +361,13 @@ export default function HomePage() {
                   <div className="w-16 h-16 bg-gradient-to-r from-easystrat-purple-accent to-easystrat-coral rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-500">
                     <Zap className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-easystrat-midnight mb-4">Strats Métier</h3>
-                  <p className="text-easystrat-stone mb-8 leading-relaxed">
+                  <h3 className="text-title font-bold text-easystrat-midnight mb-4">Strats Métier</h3>
+                  <p className="text-body text-easystrat-stone mb-8 leading-relaxed">
                     Automobile, Immobilier, Santé... Des solutions adaptées à chaque secteur d'activité.
                   </p>
                   <div className="bg-gradient-to-br from-easystrat-purple-accent/10 to-easystrat-purple-accent/5 rounded-2xl p-6 border border-easystrat-purple-accent/20">
                     <div className="text-easystrat-purple-accent text-2xl font-bold mb-2">15+</div>
-                    <div className="text-sm text-easystrat-stone font-medium">Secteurs couverts</div>
+                    <div className="text-caption text-easystrat-stone font-medium">Secteurs couverts</div>
                   </div>
                 </div>
               </AnimatedSection>
@@ -383,13 +377,13 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials */}
-      <section className="section-padding bg-white">
+      <section className="py-section-testimonials bg-white">
         <div className="container-easystrat">
           <AnimatedSection className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-semibold mb-6">
+            <h2 className="text-headline font-semibold mb-6">
               Ils ont transformé leur opérationnel
             </h2>
-            <p className="text-lg text-easystrat-stone max-w-2xl mx-auto">
+            <p className="text-body text-easystrat-stone max-w-2xl mx-auto">
               Découvrez comment nos clients utilisent EasyStrat pour gagner en efficacité.
             </p>
           </AnimatedSection>
@@ -404,10 +398,10 @@ export default function HomePage() {
                         <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                       ))}
                     </div>
-                    <p className="text-easystrat-midnight mb-6 italic">"{testimonial.content}"</p>
+                    <p className="text-body text-easystrat-midnight mb-6 italic">"{testimonial.content}"</p>
                     <div>
                       <p className="font-semibold text-easystrat-midnight">{testimonial.name}</p>
-                      <p className="text-easystrat-stone text-sm">{testimonial.role}</p>
+                      <p className="text-caption text-easystrat-stone">{testimonial.role}</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -418,13 +412,13 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-easystrat-midnight text-white section-padding">
+      <section className="bg-easystrat-midnight text-white py-section-cta">
         <div className="container-easystrat text-center">
           <AnimatedSection>
-            <h2 className="text-3xl md:text-4xl font-semibold mb-6">
+            <h2 className="text-headline font-semibold mb-6">
               Prêt à transformer votre opérationnel ?
             </h2>
-            <p className="text-lg text-easystrat-stone mb-8 max-w-2xl mx-auto">
+            <p className="text-body text-easystrat-stone mb-8 max-w-2xl mx-auto">
               Rejoignez les équipes qui ont déjà pris une longueur d'avance avec EasyStrat.
             </p>
             <Button size="lg" icon={<ArrowRight className="w-5 h-5" />}>
